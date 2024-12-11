@@ -1,0 +1,151 @@
+<template>
+  <!-- <div v-if="visible" class="popup-overlay">
+    <div class="popup-content">
+      <h3>Alert</h3>
+      <p>You need to complete your bank account setup first.</p>
+      <button @click="closePopup">Close</button>
+    </div>
+  </div> -->
+  <Transition name="modal">
+    <div v-if="propValue01" class="modal-mask">
+      <div class="modal-container" ref="modal">
+        <div class="modal-header">
+          <slot name="header"
+            ><h3>Dear {{ propUser01 }}</h3></slot
+          >
+        </div>
+
+        <div class="modal-body">
+          <slot name="body">
+            <div class="row gutters">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <p>
+                  To ensure a seamless experience, you need to provide your bank details using the
+                  mobile app first. Once completed, please log in to the website again to proceed
+                  with the KYC process.
+                </p>
+              </div>
+            </div>
+          </slot>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            id="submit"
+            name="submit"
+            class="btn btn-secondary"
+            @click="cancelModal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </Transition>
+</template>
+
+<script setup>
+import { onMounted,  watch, onUnmounted } from 'vue'
+
+
+const props = defineProps({
+  propValue01: Boolean,
+  propUser01: {
+    type: String,
+    required: true
+  }
+})
+
+// const userName = ref('')
+
+const emit = defineEmits(['close'])
+
+
+
+const cancelModal = () => {
+  emit('pparentCloseModal01')
+}
+
+
+
+watch(
+  () => props.propValue01,
+ 
+  (newVal) => {
+    if (newVal) {
+      // zoomIn()
+    } else {
+      //zoomOut()
+      emit('pparentCloseModal01')
+    }
+  }
+)
+onMounted(() => {
+  // window.addEventListener('storage', userInfo);
+  //userInfo()
+})
+
+// Clean up the event listener when the component is unmounted
+onUnmounted(() => {
+  //window.removeEventListener('storage', userInfo)
+})
+</script>
+
+<style scoped>
+/* Your styles here */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  transition: opacity 0.9s ease;
+}
+
+.modal-container {
+  width: 900px;
+  margin: auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.9s ease;
+  border-radius: 8px;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #4a736d;
+  font-weight: bold;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+</style>
