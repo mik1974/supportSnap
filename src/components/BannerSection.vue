@@ -15,7 +15,11 @@
                 <span id="typed" style="white-space: pre" class="typed"> </span>
               </div>
               <!-- h1 -->
-              <h1>Snap, Connect, Excel – Transforming<span> Work with Ease!</span></h1>
+              <!-- <h1>Snap, Connect, Excel – Transforming<span> Work with Ease!</span></h1> -->
+              <h1>
+                Land Your Dream Job Faster –
+                <span> Smart & Effortless Job Matching Made Easy!</span>
+              </h1>
               <!-- p -->
               <p>
                 Your path to new opportunities begins here. Search, apply, and land jobs with ease!
@@ -30,9 +34,9 @@
                 <li><img src="/images/banavt3.png" alt="image" /></li>
                 <li>
                   <a
-                    href="#"
+                    href="javascript:void(0);"
                     class="popup-youtube play-button"
-                    data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+                    data-url="review.mp4"
                     data-toggle="modal"
                     data-target="#myModal"
                     title="XJj2PbenIsU"
@@ -40,19 +44,22 @@
                   /></a>
                 </li>
               </ul>
-              <h3>12M + Active users</h3>
-              <p>The best application to find and manage your career opportunities worldwide</p>
+              <!-- <h3>12M + Active users</h3>
+              <p>The best application to find and manage your career opportunities worldwide</p> -->
             </div>
 
             <!-- app buttons -->
             <ul class="app_btn">
               <li>
-                <a href="#">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.anideos.supportsnap"
+                  target="_blank"
+                >
                   <img class="blue_img" src="/images/googleplay.png" alt="image" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://apps.apple.com/us/app/support-snap/id6477719410" target="_blank">
                   <img class="blue_img" src="/images/appstorebtn.png" alt="image" />
                 </a>
               </li>
@@ -80,22 +87,40 @@
                     </div>
                   </div>
                 </carousel> -->
-                <div class="item">
+                <!-- <div class="item">
                   <div class="slider_img">
-                    <!-- <img
+                    <img
                       src="../../public/images/bannerScreen01.png"
                       alt="image"
-                    /> -->
+                    /> 
                     <img src="/images/bannerScreen01.png" alt="image" />
                   </div>
-                </div>
+                </div> -->
+                <!-- <div class="item">
+                  <div class="slider_img">
+                    <img
+                      src="../../public/images/bannerScreen02.png"
+                      alt="image"
+                    /> 
+                    <img src="/images/bannerScreen02.png" alt="image" />
+                  </div>
+                </div> -->
+                <!-- <div class="item">
+                  <div class="slider_img">
+                     <img
+                      src="../../public/images/bannerScreen03.png"
+                      alt="image"
+                    /> 
+                    <img src="/images/bannerScreen03.png" alt="image" />
+                  </div>
+                </div> -->
                 <div class="item">
                   <div class="slider_img">
                     <!-- <img
-                      src="../../public/images/bannerScreen02.png"
+                      src="../../public/images/bannerScreen03.png"
                       alt="image"
                     /> -->
-                    <img src="/images/bannerScreen02.png" alt="image" />
+                    <img src="/images/bannerScreen04.png" alt="image" />
                   </div>
                 </div>
                 <div class="item">
@@ -104,7 +129,43 @@
                       src="../../public/images/bannerScreen03.png"
                       alt="image"
                     /> -->
-                    <img src="/images/bannerScreen03.png" alt="image" />
+                    <img src="/images/bannerScreen05.png" alt="image" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_img">
+                    <!-- <img
+                      src="../../public/images/bannerScreen03.png"
+                      alt="image"
+                    /> -->
+                    <img src="/images/bannerScreen06.png" alt="image" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_img">
+                    <!-- <img
+                      src="../../public/images/bannerScreen03.png"
+                      alt="image"
+                    /> -->
+                    <img src="/images/bannerScreen07.png" alt="image" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_img">
+                    <!-- <img
+                      src="../../public/images/bannerScreen03.png"
+                      alt="image"
+                    /> -->
+                    <img src="/images/bannerScreen08.png" alt="image" />
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="slider_img">
+                    <!-- <img
+                      src="../../public/images/bannerScreen03.png"
+                      alt="image"
+                    /> -->
+                    <img src="/images/bannerScreen09.png" alt="image" />
                   </div>
                 </div>
               </div>
@@ -125,7 +186,7 @@
               <i class="icofont-long-arrow-down"></i>
             </span>
             <div class="spin-text">
-              <img src="/images/12mtext.png" alt="image" />
+              <!-- <img src="/images/12mtext.png" alt="image" /> -->
             </div>
           </div>
           <span class="star"><img src="/images/smallStar.png" alt="image" /></span>
@@ -139,7 +200,7 @@
 </template>
 
 <script setup>
-import carousel from 'v-owl-carousel'
+//import carousel from 'v-owl-carousel'
 </script>
 
 <style scoped>

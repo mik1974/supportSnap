@@ -6,7 +6,7 @@
   <HowItWorks />
   <Testimonials />
   <ScreenShotsSlider />
-  <FAQs />
+  
   <DownloadApp />
   <Footer />
 </template>
@@ -20,7 +20,7 @@ import OurServices from '../components/ServicesSection.vue'
 import HowItWorks from '../components/HowItWorks.vue'
 import Testimonials from '../components/TestimonialsSection.vue'
 import ScreenShotsSlider from '../components/ScreenShots.vue'
-import FAQs from '../components/FAQs.vue'
+// import FAQs from '../components/FAQs.vue'
 import DownloadApp from '../components/DownLoadApp.vue'
 import Footer from '../components/FooterMain.vue'
 

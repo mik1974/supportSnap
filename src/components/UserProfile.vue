@@ -220,9 +220,9 @@
       :propUser01="userName"
     />
     <AccountPopup02
-      :propValue02="isModalOpen02"
-      @pparentCloseModal02="closeModal02"
-      :propUser02="userName"
+      :propValue03="isModalOpen02"
+      @pparentCloseModal03="closeModal02"
+      :propUser03="userName"
       :propKYCtoken="kycToken"
     />
   </div>
@@ -498,7 +498,7 @@ const getUser = () => {
   userImage.value = import.meta.env.VITE_APP_IMAGE_URL + cUser.value.profile_picture
 
   //this.imgVal = currentUser.profile_image;
-  if (userImage.value == 'https://virtualrealitycreators.com/supportsnap-backend/null') {
+  if (userImage.value == 'https://supportsnap.s3.us-east-2.amazonaws.com/null') {
     userImage.value =
       'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp'
   } else {

@@ -61,7 +61,7 @@
                     This app made job hunting so much easier! I found a great position within weeks!
                   </p>
                 </div>
-                <div class="review_block" data-aos="fade-up" data-aos-duration="1500">
+                <!-- <div class="review_block" data-aos="fade-up" data-aos-duration="1500">
                   <div class="coustomer_info">
                     <div class="avtar">
                       <img src="/images/review2..png" alt="image" />
@@ -83,7 +83,7 @@
                     confident going into interviews, and I ended up getting offers from two
                     companies!
                   </p>
-                </div>
+                </div> -->
                 <div class="review_block" data-aos="fade-up" data-aos-duration="1500">
                   <div class="coustomer_info">
                     <div class="avtar">
@@ -102,8 +102,7 @@
                     </div>
                   </div>
                   <p>
-                    I was struggling with job hunting until I found this app. The resume boost and
-                    direct messaging features helped me secure multiple interviews within weeks!
+                    I was struggling with job hunting until I found this app. The direct messaging features helped me secure multiple interviews within weeks!
                   </p>
                 </div>
               </div>
@@ -116,8 +115,7 @@
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 /* Your styles here */

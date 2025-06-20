@@ -101,7 +101,7 @@ const zoomOut = () => {
 // }
 
 watch(
-  () => props.propValue,
+  () => props.propValue02,
   (newVal) => {
     if (newVal) {
       zoomIn()

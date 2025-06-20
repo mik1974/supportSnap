@@ -886,7 +886,7 @@ const handleaddAcount = async () => {
     // const respp = await store.dispatch('resendAccountDetail', kycToken)
     // //console.log(respp.status, 'Response Status')
     try {
-      console.log('I am In')
+      //console.log('I am In')
       const respp = await store.dispatch('resendAccountDetail', kycToken)
 
       if (respp && respp.status === 200) {

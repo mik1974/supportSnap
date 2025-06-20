@@ -10,7 +10,7 @@ API.interceptors.request.use(
   function (config) {
     let token = localStorage.getItem('token')
     //let token = cUser.value.api_Token
-    //console.log(token, 'Bearer Token')
+    console.log(token, 'Bearer Token')
     if (!token) delete config.headers['Authorization']
     else config.headers['Authorization'] = `Bearer ${token}`
 

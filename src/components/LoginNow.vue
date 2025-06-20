@@ -148,7 +148,7 @@ const submitForm = () => {
     }
   } catch (error) {
     alert('form failed validation')
-    console.log(error)
+    //console.log(error)
   }
 }
 

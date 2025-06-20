@@ -56,7 +56,7 @@ const getUser = async () => {
   //   )
   const tokenkey = token.value
   const respp = await store.dispatch('resendAccountDetail', tokenkey)
-  console.log(respp, 'bilal')
+  //console.log(respp, 'bilal')
   if (respp.status == 200) {
     isModalOpen02.value = true
     gsap.to(

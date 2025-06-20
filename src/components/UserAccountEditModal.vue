@@ -209,7 +209,7 @@ const submitForm = () => {
     .$validate()
     .then(() => {
       if (!v$.value.$error) {
-        console.log('I am In Function')
+        //console.log('I am In Function')
         sentInfoAcc()
       }
     })
@@ -221,7 +221,7 @@ const submitForm = () => {
 
 const sentInfoAcc = async () => {
   try {
-    console.log('Hi Dear', selectedDate.value, day.value, month.value, year.value)
+    // console.log('Hi Dear', selectedDate.value, day.value, month.value, year.value)
 
     const formData02 = new FormData()
     formData02.append('conuntry', state.vu_selectedCountry)
@@ -240,28 +240,27 @@ const sentInfoAcc = async () => {
     }
 
     let response = await store.dispatch('AccountDetail', formData02)
-    console.log(response, 'Ali Imran')
+    //console.log(response, 'Ali Imran')
     if (response.data.status == 200) {
       await store.dispatch('verify')
     }
-    console.log(response.data.message)
+    //console.log(response.data.message)
 
-    console.log('Country', state.vu_selectedCountry, 'Picture:', imageFile.value.files[0])
+    // console.log('Country', state.vu_selectedCountry, 'Picture:', imageFile.value.files[0])
   } catch (error) {
     //alert('form failed validation')
     console.log(error)
   }
 }
 
-const hitUserBankAccount= async () =>{
+const hitUserBankAccount = async () => {
   let accoutResponse = await store.dispatch('AccountUpdate')
-  console.log(accoutResponse, "Account Update Detail")
+  //console.log(accoutResponse, "Account Update Detail")
 }
 
 onMounted(() => {
   loadCurrentUser()
   hitUserBankAccount()
-  
 
   // Ensure states are populated
 })

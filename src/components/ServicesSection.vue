@@ -20,15 +20,15 @@
                   <i class="icofont-tasks-alt"></i>
                   <span>Task Manage</span>
                 </div>
-                <h2><span>Unlock Premium Features</span> for a Competitive Edge</h2>
-                <p>Take your job search to the next level with our exclusive premium services.</p>
+                <h2><span>Get Support Snap</span> for a Competitive Edge</h2>
+                <p>Experience a smarter way to find jobs with our premium features 🚀</p>
                 <ul class="listing_block">
                   <li>
                     <div class="icon">
                       <span><i class="icofont-ui-check"></i></span>
                     </div>
                     <div class="text">
-                      <h3>Priority Job Listings</h3>
+                      <h3>Exclusive Job Listings</h3>
                       <p>
                         Get early access to the latest job openings, ensuring you’re among the first
                         to apply.
@@ -40,18 +40,44 @@
                       <span><i class="icofont-ui-check"></i></span>
                     </div>
                     <div class="text">
-                      <h3>Advanced Filters & Insights</h3>
+                      <h3>Get The Help Fast!</h3>
+                      <p>Find on demand help at a great price!</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <span><i class="icofont-ui-check"></i></span>
+                    </div>
+                    <div class="text">
+                      <h3>Priority Applications</h3>
+                      <p>Stand out from the competition with boosted job applications.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <span><i class="icofont-ui-check"></i></span>
+                    </div>
+                    <div class="text">
+                      <h3>1-on-1 Career Coaching</h3>
+                      <p>Receive expert guidance to refine your resume and ace interviews.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <span><i class="icofont-ui-check"></i></span>
+                    </div>
+                    <div class="text">
+                      <h3>Real-Time Notifications</h3>
                       <p>
-                        Use advanced search filters and gain insights into job market trends, salary
-                        ranges, and in-demand skills to refine your job hunt. the.
+                        Stay ahead with instant alerts for new job postings and employer responses.
                       </p>
                     </div>
                   </li>
                 </ul>
-                <div class="btn_block">
+                <!-- <div class="btn_block">
                   <a href="!#" class="btn puprple_btn ml-0">Start Free Trial</a>
                   <div class="btn_bottom"></div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="col-md-6">
@@ -104,10 +130,10 @@
                     </div>
                   </li>
                 </ul>
-                <div class="btn_block">
+                <!-- <div class="btn_block">
                   <a href="!#" class="btn puprple_btn ml-0">Start Free Trial</a>
                   <div class="btn_bottom"></div>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="col-md-6">
@@ -116,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="row service_blocks">
+          <!-- <div class="row service_blocks">
             <div class="col-md-6">
               <div class="service_text" data-aos="fade-up" data-aos-duration="1500">
                 <div class="service_badge"><i class="icofont-list"></i> <span>History</span></div>
@@ -173,7 +199,7 @@
                 <img src="/images/service03.png" alt="image" />
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- Service Section End -->
@@ -183,8 +209,7 @@
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 /* Your styles here */
@@ -192,6 +217,16 @@
   margin-bottom: 15px;
 }
 .listing_block {
-  margin-top: 30px;
+  margin-top: 15px;
+}
+ul.feature_list {
+  margin-top: 8px;
+}
+ul li {
+  margin-bottom: 12px;
+}
+.text h3 {
+  font-size: 20px;
+  font-weight: 600;
 }
 </style>

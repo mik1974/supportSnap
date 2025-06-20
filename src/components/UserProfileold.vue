@@ -182,7 +182,7 @@ const deleteUser = async () => {
       router.push({ name: 'UserLogin' })
     }
   } catch (error) {
-    console.error(error)
+    //console.error(error)
   }
 }
 
@@ -308,7 +308,7 @@ const getUser = () => {
 // }
 
 const handleChildClosed = () => {
-  console.log('Child component closed, performing actions in the parent component')
+ // console.log('Child component closed, performing actions in the parent component')
   nextTick(() => {
     getUser()
   })
@@ -317,7 +317,7 @@ const handleChildClosed = () => {
 const handleScroll = () => {
   const scrollPosition = window.scrollY
   // Perform actions based on scroll position
-  console.log(`Scroll position: ${scrollPosition}`)
+ // console.log(`Scroll position: ${scrollPosition}`)
   // Example: Perform some animation or trigger some effect based on scroll position
 }
 

@@ -18,12 +18,15 @@
             <!-- app buttons -->
             <ul class="app_btn">
               <li>
-                <a href="#">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.anideos.supportsnap"
+                  target="_blank"
+                >
                   <img class="blue_img" src="/images/googleplay.png" alt="image" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://apps.apple.com/us/app/support-snap/id6477719410" target="_blank">
                   <img class="blue_img" src="/images/appstorebtn.png" alt="image" />
                 </a>
               </li>
@@ -33,6 +36,10 @@
         <div class="background_slider">
           <div class="dowanload_slider">
             <div class="downlist">
+              <div class="text_block">
+                <span>Download </span>
+                <span class="mark_star">•</span>
+              </div>
               <div class="text_block">
                 <span>Download </span>
                 <span class="mark_star">•</span>
@@ -107,6 +114,10 @@
           </div>
           <div class="dowanload_slider">
             <div class="downlist">
+              <div class="text_block">
+                <span>Download </span>
+                <span class="mark_star">•</span>
+              </div>
               <div class="text_block">
                 <span>Download </span>
                 <span class="mark_star">•</span>

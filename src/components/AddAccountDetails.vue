@@ -128,16 +128,27 @@
 
             <div class="row row-space">
               <div class="col-sm-12 col-md-12 col-lg-12">
-                <label for="images" class="drop-container" id="dropcontainer">
+                <label
+                  for="images"
+                  class="drop-container"
+                  id="dropcontainer"
+                  @dragover.prevent
+                  @drop.prevent="handleFileDrop"
+                >
                   <span class="drop-title">Drop identity document file here</span>
                   or
                   <input
                     type="file"
                     id="images"
                     accept="image/*,application/pdf"
+                    @change="handleFileSelect"
                     required
                     ref="imageFile"
                   />
+                  <div v-if="selectedFileName" class="file-name">
+                    Selected file: {{ selectedFileName }}
+                  </div>
+                  <!-- <span v-if="v$.vu_file.$error">{{ v$.vu_file.$errors[0].$message }}</span> -->
                 </label>
                 <!-- <span v-if="v$.vu_file.$error">
                   {{ v$.vu_file.$errors[0].$message }}
@@ -158,7 +169,12 @@
       </div>
     </div>
 
-    <AccountPopup02 :propValue="isModalOpen" @pparentCloseModal="closeModal" :propUser="userName" />
+    <!-- <AccountPopup02 :propValue="isModalOpen" @pparentCloseModal="closeModal" :propUser="userName" /> -->
+    <AccountPopup02
+      :propValue02="isModalOpen"
+      @pparentCloseModal02="closeModal"
+      :propUser02="userName"
+    />
   </section>
 </template>
 
@@ -183,13 +199,15 @@ const modal = ref(null)
 const isLoading = ref(false)
 const store = useStore()
 const imageFile = ref(null)
+const selectedFileName = ref('')
 // const formatPattern = 'dd-MM-yyyy'
 // const selectedDate = ref(new Date(), formatPattern)
 // const selectedDate = ref(formatPattern)
 // const selectedDate = formatPattern
-const currentUser = reactive({
-  userInfo: {}
-})
+// const currentUser = reactive({
+//   userInfo: {}
+// })
+
 const validNum = (value) => {
   if (/^[0-9]*$/.test(value)) {
     if (!/^[0-9]*$/.test(value)) {
@@ -238,9 +256,23 @@ const moreThan13YearsAgo = (value) => {
   return value <= thirteenYearsAgo
 }
 
+const handleFileSelect = (event) => {
+  const file = event.target.files[0]
+  if (file) {
+    selectedFileName.value = file.name
+  }
+}
+
+const handleFileDrop = (event) => {
+  const files = event.dataTransfer.files
+  if (files.length > 0) {
+    selectedFileName.value = files[0].name
+  }
+}
+
 // Selected country and state
 
-// const userName = ref('')
+const userName = ref('')
 // const userLname = ref('')
 // const userEmail = ref('')
 //const cu = computed(() => store.getters.getUser)
@@ -248,13 +280,14 @@ const moreThan13YearsAgo = (value) => {
 const loadCurrentUser = async () => {
   await store.dispatch('verify')
   // currentUser.userInfo = JSON.parse(localStorage.getItem('user'))
-  currentUser.userInfo = computed(() => store.getters.getUser)
+  const currentUserInfo = computed(() => store.getters.getUser)
 
   //console.log('CurUser', currentUser.userInfo)
-  state.vu_firstName = currentUser.userInfo.name
-  state.vu_lastName = currentUser.userInfo.last_name
+  state.vu_firstName = currentUserInfo.value.name
+  state.vu_lastName = currentUserInfo.value.last_name
   // userEmail.value = currentUser.userInfo.email
   // console.log(state.vu_firstName, 'First NAme')
+  userName.value = state.vu_firstName + ' ' + state.vu_lastName
 }
 
 // watch()
@@ -288,8 +321,7 @@ const state = reactive({
   vu_phone: '',
   // vu_selectedDate: ref(new Date(), formatPattern),
   vu_selectedDate: null,
-  vu_ssn_last_4: '',
-  vu_file: ''
+  vu_ssn_last_4: ''
 })
 
 const rules = computed(() => ({
@@ -299,8 +331,8 @@ const rules = computed(() => ({
   vu_ssn_last_4: { required, minLength: minLength(4), maxLength: maxLength(4), validNum },
   vu_phone: {
     required,
-    minLength: minLength(15)
-    //maxLength: maxLength(10)
+    minLength: minLength(15),
+    maxLength: maxLength(15)
     // validPhone
   }
 }))
@@ -308,6 +340,7 @@ const rules = computed(() => ({
 const v$ = useVuelidate(rules, state)
 
 const submitForm = () => {
+  //console.log('In Submit function')
   v$.value
     .$validate()
     .then(() => {
@@ -362,7 +395,7 @@ const sentInfoAcc = async () => {
     //console.log('Country', state.vu_selectedCountry, 'Picture:', imageFile.value.files[0])
   } catch (error) {
     //alert('form failed validation')
-    //console.log(error)
+    console.log(error)
   }
   isLoading.value = false
 }
@@ -375,10 +408,10 @@ const closeModal = () => {
 onMounted(() => {
   loadCurrentUser()
 
-  // const checkStatus = async () => {
-  //   await store.dispatch('verify')
-  // }
-  // setInterval(checkStatus, 5000)
+  //  const checkStatus = async () => {
+  // await store.dispatch('verify')
+  //  }
+  //  setInterval(checkStatus, 5000)
 })
 
 // const goBackHome = () => {

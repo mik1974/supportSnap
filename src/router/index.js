@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeMain from '../views/HomeMain.vue'
 import UserLogin from '../views/LoginNow.vue'
 import TermsConditions from '../views/Terms-and-conditions.vue'
+import TermsOfUse from '../views/TermsOfUse.vue'
 import TermsAndConditions from '../views/Terms_and_conditions.vue'
 import PrivacyPolicy from '../views/Privacy-Policy.vue'
 import Privacy_Policy from '../views/Privacy_Policy.vue'
@@ -11,7 +12,7 @@ import Deletion_Policy from '../views/Deletion_Policy.vue'
 import UserProfile from '../views/UserProfile.vue'
 import ContactUs from '../views/Contact_Us.vue'
 import AboutUs from '../views/About-Us.vue'
-//import About from '../views/About_Us.vue'
+import About from '../views/About_Us.vue'
 import PageNotFound from '../views/PagenotFound.vue'
 import StripeError from '../views/StripeError.vue'
 import AccountDetails from '../views/AddAccountDetail.vue'
@@ -19,7 +20,7 @@ import AccountDetails from '../views/AddAccountDetail.vue'
 import ThankYou from '../views/ThankYou.vue'
 import ResetPassword from '@/views/ResetPassword.vue'
 //import store from '@/store'
-import store  from '@/store'; // Import your Vuex store
+import store from '@/store' // Import your Vuex store
 // import { nextTick } from 'vue'
 import $ from 'jquery'
 
@@ -27,17 +28,13 @@ import $ from 'jquery'
 async function beforeEach(to, from, next) {
   if (!store.state.user) {
     try {
-      await store.dispatch('fetchUser');
+      await store.dispatch('fetchUser')
     } catch (error) {
-      console.error('Failed to fetch user:', error);
+      //console.error('Failed to fetch user:', error)
     }
   }
-  next();
-};
-
-
-
-
+  next()
+}
 
 async function authGuard(to, from, next) {
   // Check if already verified or logged in
@@ -104,11 +101,8 @@ function baseGuard(to, from, next) {
 //   routes: [
 
 const router = createRouter({
-  history:
-    process.env.NODE_ENV === 'production'
-      ? createWebHistory('/supportSnap-web/')
-      : createWebHistory(),
-  base: process.env.NODE_ENV == 'production' ? '/supportSnap-web/' : '/',
+  history: process.env.NODE_ENV === 'production' ? createWebHistory('/') : createWebHistory(),
+  base: process.env.NODE_ENV == 'production' ? '/' : '/',
   routes: [
     // {
     //   path: '/',
@@ -134,6 +128,15 @@ const router = createRouter({
       path: '/about-us',
       name: 'AboutUs',
       component: AboutUs
+      // meta: {
+      //   requiresAuth: true
+      // },
+      // beforeEnter: isUserLoggedin
+    },
+    {
+      path: '/about_us',
+      name: 'About',
+      component: About
       // meta: {
       //   requiresAuth: true
       // },
@@ -194,6 +197,12 @@ const router = createRouter({
     },
 
     {
+      path: '/terms-of-use',
+      name: 'TermsOfUse',
+      component: TermsOfUse
+    },
+
+    {
       path: '/terms_and_conditions',
       name: 'TermsAndConditions',
       component: TermsAndConditions
@@ -238,7 +247,11 @@ const router = createRouter({
       //   requiresAuth: true
       // }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    // Always scroll to the top
+    return { top: 0, behavior: 'smooth' }
+  }
 })
 
 router.afterEach((to) => {

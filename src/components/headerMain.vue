@@ -175,7 +175,7 @@ const getUser = () => {
         kycToken.value = user.value.resend_kyc_token
       }
 
-      console.log(userName.value, 'CurrentUser Header')
+      //console.log(userName.value, 'CurrentUser Header')
 
       btnLabel.value = 'Logout'
     } else {

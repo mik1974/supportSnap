@@ -147,39 +147,64 @@
           <div class="section_title" data-aos="fade-up" data-aos-duration="1500">
             <span class="title_badge mb-1">About us</span>
             <h2>
-              Application with the best
-              <img src="/images/mobileicon02.png" alt="image" /> user <br />
-              interface convert
-              <span><img src="/images/usericon01.png" alt="image" /> visitor</span>
-              into
-              <span><img src="/images/magnet02.png" alt="image" /> leads</span>
+              Earn Money on Your Terms <br />
+              <span>Find Work & Gig Jobs Anytime!</span>
             </h2>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <ul class="app_statstic" id="counter" data-aos="fade-in" data-aos-duration="1500">
                 <li data-aos="fade-up" data-aos-duration="1500">
-                  <div class="text">
+                  <!-- <div class="text">
                     <p><span class="counter-value" data-count="17">0</span><span>M+</span></p>
                     <p>Download</p>
+                  </div> -->
+
+                  <div class="text">
+                    <p><span>Keep </span><span>85%</span></p>
+                    <p>of Your<br> Earnings</p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-duration="1500">
-                  <div class="text">
+                  <!-- <div class="text">
                     <p><span class="counter-value" data-count="2300">1500</span><span>+</span></p>
                     <p>Reviews</p>
+                  </div> -->
+                  <div class="text">
+                    <p><span>Quick </span><span>Cash</span> Payouts!</p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-duration="1500">
-                  <div class="text">
+                  <!-- <div class="text">
                     <p><span class="counter-value" data-count="150">0</span><span>+</span></p>
                     <p>Countries</p>
+                  </div> -->
+                  <div class="text">
+                    <p><span>More </span><span>Free</span></p>
+                    <p>Time, More Flexibility</p>
                   </div>
                 </li>
                 <li data-aos="fade-up" data-aos-duration="1500">
-                  <div class="text">
+                  <!-- <div class="text">
                     <p><span class="counter-value" data-count="08">0 </span><span>M+</span></p>
                     <p>Followers</p>
+                  </div> -->
+                  <div class="text">
+                    <p><span>Boost </span></p>
+                     <p>Your Ratings & <br>Secure More Work</p> 
+                    
+                    <div class="star" data-v-e710592b="">
+                      <span data-v-e710592b=""><i class="icofont-star" data-v-e710592b=""></i></span
+                      ><span data-v-e710592b=""
+                        ><i class="icofont-star" data-v-e710592b=""></i></span
+                      ><span data-v-e710592b=""
+                        ><i class="icofont-star" data-v-e710592b=""></i></span
+                      ><span data-v-e710592b=""
+                        ><i class="icofont-star" data-v-e710592b=""></i></span
+                      ><span data-v-e710592b=""
+                        ><i class="icofont-star" data-v-e710592b=""></i
+                      ></span>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -191,19 +216,43 @@
             </div>
             <div class="col-lg-4">
               <p data-aos="fade-up" data-aos-duration="1500">
-                Looking for the perfect job can be overwhelming, but our app makes it easier. Since
-                its launch, we've helped thousands of job seekers find their ideal roles by
-                connecting them with top employers. Whether you're starting your career or looking
-                for new opportunities, our app is designed to simplify the job search process and
-                get you hired faster.
+                <!-- Looking for the perfect job can be overwhelming, but our app makes it easier. We
+                help job seekers find their ideal roles by connecting them with top employers.
+                Whether you're seeking quick cash or looking for new opportunities, our app is
+                designed to simplify the job search process and get you hired faster. -->
+                Job hunting made easy! Our app connects you with top employers,offering gig jobs,
+                daily pay jobs, and freelance opportunities. Whetheryou need to earn money fast or
+                find long-term secure work, we make itsimple, stress-free, and efficient.
               </p>
+              <div class="newCheckPoint">
+                <ul>
+                  <li>ِ<i class="icofont-ui-check"></i>Quick hires with verified employers</li>
+                  <li>ِ<i class="icofont-ui-check"></i>Find jobs that match your skills</li>
+                  <li>ِ<i class="icofont-ui-check"></i>Get paid fast with money-making apps</li>
+                </ul>
+              </div>
+              <hr />
+              <h3>What Our Users Say</h3>
+              <blockquote class="bquote">
+                <!-- The quotation goes inside the tag -->
+                "I found a great job in just a few days! The app made the processsimple and
+                stress-free."
+              </blockquote>
+              <p class="quoter">Alex R.</p>
+              <hr />
+              <blockquote class="bquote">
+                <!-- The quotation goes inside the tag -->
+                "This app connected me with top employers instantly. I landed a jobfaster than
+                ever!"
+              </blockquote>
+              <p class="quoter">Jamie L.</p>
               <div class="video_block" data-aos="fade-up" data-aos-duration="1500">
                 <img class="thumbnil" src="/images/applicationvideothumb.png" alt="image" />
                 <div class="playBtn">
                   <a
-                    href="#"
+                    href="javascript:void(0);"
                     class="popup-youtube play-button play_icon"
-                    data-url="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+                    data-url="review.mp4"
                     data-toggle="modal"
                     data-target="#myModal"
                     title="XJj2PbenIsU"
@@ -213,7 +262,7 @@
                 </div>
               </div>
               <div class="btn_block" data-aos="fade-up" data-aos-duration="1500">
-                <a href="/" class="btn puprple_btn ml-0">START FREE TRIAL</a>
+                <a href="javascript:void(0);" class="btn puprple_btn ml-0">DOWNLOAD NOW</a>
                 <div class="btn_bottom"></div>
               </div>
             </div>
@@ -285,8 +334,7 @@
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 /* Your styles here */
@@ -334,5 +382,55 @@
 }
 .task_app_section .task_block03 .row {
   align-items: center;
+}
+
+.text {
+  margin-bottom: 15px;
+}
+.listing_block {
+  margin-top: 30px;
+}
+.mrnil {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+.mrnil .text h3 {
+  font-weight: bold;
+  color: #e0a233;
+}
+
+.service_section .mrnil .listing_block li {
+  margin-bottom: 50px !important;
+}
+hr {
+  margin: 10px 0;
+}
+.bquote {
+  font-weight: 600;
+  font-style: italic;
+}
+.quoter {
+  font-size: 18px;
+}
+.newCheckPoint {
+  margin: 20px;
+}
+.newCheckPoint ul {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.newCheckPoint ul li {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.newCheckPoint ul li .icofont-ui-check {
+  padding-right: 15px;
+}
+.about_section h3 {
+  margin-bottom: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  color:#0a2c3f
 }
 </style>

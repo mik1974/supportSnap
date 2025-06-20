@@ -763,7 +763,8 @@ header {
 
 .banner_section .app_btn li a img {
   transition: 0.4s all;
-  height: 36px;
+  /* height: 36px; */
+  height: 5vh;
 }
 
 /* hero slider users */
@@ -1363,6 +1364,7 @@ iframe#youtubevideo {
 .service_section .service_text .listing_block li {
   display: flex;
   gap: 15px;
+  margin-bottom: 10px;
 }
 
 .service_section .service_text .listing_block li .icon span {
@@ -2160,7 +2162,7 @@ iframe#youtubevideo {
 }
 
 #footerr .logo_side .logo {
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 
 #footerr .logo_side .logo h3 {
@@ -2376,7 +2378,7 @@ iframe#youtubevideo {
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  background-image: url(../images/yellow_dotes.png);
+  /* background-image: url(../images/yellow_dotes.png); */
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -3773,7 +3775,7 @@ iframe#youtubevideo {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
   text-align: center;
 }
@@ -3871,13 +3873,14 @@ iframe#youtubevideo {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   padding-top: 5px;
   text-align: left;
+  color: #ff0000;
 }
 
 .coustome_checkbox input {

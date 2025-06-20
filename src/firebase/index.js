@@ -3,7 +3,8 @@
 
 import { initializeApp } from 'firebase/app'
 //import { getAnalytics } from "firebase/analytics";
-import { getAuth } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
+//import { getAuth } from 'firebase/auth'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,7 +18,7 @@ const firebaseConfig = {
 
   projectId: 'supportsnap-d9151',
 
-  storageBucket: 'supportsnap-d9151.appspot.com',
+  storageBucket: 'supportsnap-d9151.firebasestorage.app',
 
   messagingSenderId: '895186336220',
 
@@ -29,5 +30,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 //const analytics = getAnalytics(app);
+//const provider = new GoogleAuthProvider()
 const auth = getAuth(app)
-export { auth }
+
+//export { auth }
+export { auth, GoogleAuthProvider, signInWithPopup, signOut }

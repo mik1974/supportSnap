@@ -5,6 +5,8 @@ import { signInWithEmailAndPassword } from '@firebase/auth'
 import { sendPasswordResetEmail } from '@firebase/auth'
 import { signOut } from '@firebase/auth'
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+// import { GoogleAuthProvider, signInWithPopup } from '../firebase/index.js'
+//import { GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "firebase/auth";
 
 import { toast } from 'vue3-toastify'
 import router from '../router'
@@ -14,7 +16,7 @@ export default {
     try {
       let resp = await signInWithEmailAndPassword(auth, details.email, details.password)
       let respToken = await resp.user.accessToken
-      console.log(resp.user, 'New Status')
+      //console.log(resp.user, 'New Status')
 
       let respp = await API.post(ENDPOINTS.USER_LOGIN, { token: respToken })
       // localStorage.setItem('token', respp.data.user.api_token)
@@ -86,13 +88,14 @@ export default {
       const provider = new GoogleAuthProvider()
 
       let respp01 = await signInWithPopup(auth, provider)
+      // let respp01 = await signInWithRedirect(auth, provider);
 
       //console.log(respp01, 'uuu')
 
       //let respp = await API.post(ENDPOINTS.USER_LOGIN, { token: respToken })
       // const user = respp.user
       let respToken = respp01.user?.accessToken
-      //console.log(respToken, 'Token')
+      // console.log(respToken, 'Token')
 
       let respp = await API.post(ENDPOINTS.USER_LOGIN, { token: respToken })
       localStorage.setItem('token', respp.data.user.api_token)
@@ -278,7 +281,7 @@ export default {
       let resendResponse = await API.post(ENDPOINTS.USER_ACCOUNT_RESEND_LINK, {
         token: tokenkey
       })
-      console.log(resendResponse, 'Resend Account Detail')
+      //console.log(resendResponse, 'Resend Account Detail')
       commit('ZAFAR', resendResponse)
 
       toast.success(resendResponse.data.message, {
@@ -348,7 +351,7 @@ export default {
       })
     } catch (error) {
       //console.log(error)
-      toast.success(error, {
+      toast.error(error, {
         position: toast.POSITION.TOP_RIGHT,
         timeout: 5000,
         duration: 5000,
@@ -369,7 +372,7 @@ export default {
   async stripeIdentityDocument({ commit }) {
     try {
       let responseKYCUpdate = await API.post(ENDPOINTS.USER_KYC_ACCOUNT_UPDATE)
-      console.log(responseKYCUpdate.data, 'Update for Account Detail')
+      //console.log(responseKYCUpdate.data, 'Update for Account Detail')
       toast.success(responseKYCUpdate.data.message, {
         position: toast.POSITION.TOP_RIGHT,
         timeout: 5000,
@@ -453,10 +456,10 @@ export default {
   async fetchUser({ commit }) {
     try {
       const response = await API.get(ENDPOINTS.VERIFY) // Replace with your API endpoint
-      console.log(response.data.user, 'Veryfiy user')
+      //console.log(response.data.user, 'Veryfiy user')
       commit('verifyUserMutate', response.data.user)
     } catch (error) {
-      console.error('Failed to fetch user data:', error)
+      //console.error('Failed to fetch user data:', error)
     }
   }
 }

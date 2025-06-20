@@ -34,13 +34,15 @@
                   We are SupportSnap ("Company," "we," "us," "our"), a company registered in New
                   York, United States at 526 Melrose Street, Water Mill, 11976 New York, Water Mill,
                   NY.<br />
-                  We operate the website https://SupportSnap.staginganideos.com (the "Site"), the
+                  We operate the website
+                  <a href="https://supportsnap.org">https://supportsnap.org</a> (the "Site"), the
                   mobile application SupportSnap (the "App"), as well as any other related products
                   and services that refer or link to these legal terms (the "Legal Terms")
                   (collectively, the "Services").<br />
                   You can contact us by <br />
-                  Phone: <a href="tel:+1080707555321">(+1)080 707 555-321</a>, <br />
-                  Email: <a href="mailto:info@SupportSnap.com">info@SupportSnap.com</a><br />
+                  <!-- Phone: <a href="tel:+1080707555321">(+1)080 707 555-321</a>, <br /> -->
+                  <!-- Email: <a href="mailto:info@SupportSnap.com">info@SupportSnap.com</a><br /> -->
+                  Email: <a href="mailto:info@supportsnap.org">info@supportsnap.org</a><br />
                   By mail: 526 Melrose Street, Water Mill, 11976 New York, Water Mill, NY, United
                   States.<br />
                   These Legal Terms constitute a legally binding agreement made between you, whether
@@ -187,11 +189,11 @@
                   <p>
                     If you wish to make any use of the Services, Content, or Marks other than as set
                     out in this section or elsewhere in our Legal Terms, please address your request
-                    to: info@SupportSnap.com. If we ever grant you the permission to post,
-                    reproduce, or publicly display any part of our Services or Content, you must
-                    identify us as the owners or licensors of the Services, Content, or Marks and
-                    ensure that any copyright or proprietary notice appears or is visible on
-                    posting, reproducing, or displaying our Content.
+                    to: <a href="mailto:info@supportsnap.org">info@supportsnap.org</a> If we ever
+                    grant you the permission to post, reproduce, or publicly display any part of our
+                    Services or Content, you must identify us as the owners or licensors of the
+                    Services, Content, or Marks and ensure that any copyright or proprietary notice
+                    appears or is visible on posting, reproducing, or displaying our Content.
                   </p>
                   <p>
                     We reserve all rights not expressly granted to you in and to the Services,
@@ -365,8 +367,10 @@
                   </p>
                   <p>
                     If you are unsatisfied with our Services, please email us at
-                    <a href="mailto:info@SupportSnap.com">info@SupportSnap.com</a> or call us at
-                    (+1)080707 555-321.
+                    <a href="mailto:info@supportsnap.org">info@supportsnap.org</a><br />
+                    <!-- or
+                     call us at
+                    (+1)080707 555-321. -->
                   </p>
                 </div>
                 <div class="termsbox" id="s">
@@ -782,8 +786,8 @@
                   <p>
                     We care about data privacy and security. Please review our Privacy Policy:
 
-                    <a href="https://SupportSnap.staginganideos.com/privacy-policy"
-                      >https://SupportSnap.staginganideos.com/privacy-policy</a
+                    <a href="https://supportsnap.org/privacy-policy"
+                      >https://supportsnap.org/privacy-policy</a
                     >.
                   </p>
                   <p>
@@ -1076,8 +1080,9 @@
                   </p>
                   <p>Mail: SupportSnap, 526 Melrose Street, Water Mill, 11976 New York Water</p>
                   <p>Mill, NY United States</p>
-                  <p>Phone: <a href="tel:180707555321">(+1)080 707 555-321</a></p>
-                  <p>Email: <a href="mailto:info@SupportSnap.com">info@SupportSnap.com</a></p>
+                  <!-- <p>Phone: <a href="tel:180707555321">(+1)080 707 555-321</a></p> -->
+                  <!-- <p>Email: <a href="mailto:info@SupportSnap.com">info@SupportSnap.com</a></p> -->
+                  <p>Email: <a href="mailto:info@supportsnap.org">info@supportsnap.org</a></p>
                 </div>
               </div>
             </div>
@@ -1100,7 +1105,7 @@ const toppad = (id) => {
   sectionID.value = id
   activeSection.value = id
   const targetElement = document.getElementById(id)
-  console.log(targetElement)
+  //console.log(targetElement)
   if (targetElement) {
     targetElement.classList.add('padded-section')
     targetElement.scrollIntoView({ behavior: 'smooth' })

@@ -1,18 +1,18 @@
 <template>
   <div>
     <!-- <HeaderMain/> -->
-    <AboutUsComp />
+    <Termsofuse />
     <myFooter />
   </div>
 </template>
 
 <script>
-import AboutUsComp from '@/components/AboutUsComp.vue'
+import Termsofuse from '@/components/TermsOfUse.vue'
 import myFooter from '@/components/FooterMainMob.vue'
 export default {
   name: 'About_us',
   components: {
-    AboutUsComp,
+    Termsofuse,
 
     myFooter
   }

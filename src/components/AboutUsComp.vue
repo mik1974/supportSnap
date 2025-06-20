@@ -1,23 +1,22 @@
 <template>
-  <HeaderMain />
   <section class="aboutus">
     <!-- Page-wrapper-Start -->
     <div class="page_wrapper">
       <!-- About Us Section Start -->
       <section class="about_us_section">
         <!-- <div class="container">
-          <div
-            class="section_title textStyle"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <span class="title_badge">About us</span>
-            <h2>
-              We are app agency <br />
-              <span>building high level of smart app</span>
-            </h2>
-          </div>
-        </div> -->
+            <div
+              class="section_title textStyle"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
+              <span class="title_badge">About us</span>
+              <h2>
+                We are app agency <br />
+                <span>building high level of smart app</span>
+              </h2>
+            </div>
+          </div> -->
         <div class="container">
           <div class="row abt_text" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-md-8">
@@ -98,18 +97,18 @@
       <!-- About Us Section Start -->
       <section class="about_us_section">
         <!-- <div class="container">
-          <div
-            class="section_title textStyle"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <span class="title_badge">About us</span>
-            <h2>
-              We are app agency <br />
-              <span>building high level of smart app</span>
-            </h2>
-          </div>
-        </div> -->
+            <div
+              class="section_title textStyle"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
+              <span class="title_badge">About us</span>
+              <h2>
+                We are app agency <br />
+                <span>building high level of smart app</span>
+              </h2>
+            </div>
+          </div> -->
         <div class="container">
           <div class="row abt_text" data-aos="fade-up" data-aos-duration="1500">
             <div class="col-md-12">
@@ -248,25 +247,21 @@
       </div>
     </div>
   </section>
-  <myFooter />
 </template>
-
-
- <script>
-import HeaderMain from '@/components/headerMain.vue'
+  
+  
+   <script>
 import HIWAbout from '@/components/HowItWorksAbout.vue'
-import myFooter from '@/components/FooterMain.vue'
+
 export default {
   name: 'About-Us',
   components: {
-    HeaderMain,
-    myFooter,
     HIWAbout
   }
 }
 </script>
-
-  <style scoped>
+  
+    <style scoped>
 .textStyle {
   text-align: left;
 }

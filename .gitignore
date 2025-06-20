@@ -6,7 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+.env
+.env.*  # optional: ignores .env.local, .env.production, etc.
 node_modules
 .DS_Store
 dist

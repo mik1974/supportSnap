@@ -8,9 +8,10 @@
             <span class="title_badge">Contact us</span>
             <h2>Any query ? <span>let's talk</span></h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing indus orem Ipsum
-              <br />
-              has been the industrys standard dummy text ever since.
+              We’re here to listen, help, and collaborate! Whether you’re curious about our
+              services, have feedback to share, or need technical support, our team is ready to
+              assist you. Drop us a message below, and we’ll get back to you within 24 hours. Your
+              ideas matter to us, and we’re just a click away!
             </p>
           </div>
           <ul class="contact_listing">
@@ -19,9 +20,9 @@
                 <img src="/images/mail_icon.png" alt="image" />
               </span>
               <span class="lable">Email us</span>
-              <a href="mailto:example@gmail.com">example@gmail.com</a>
+              <a href="mailto:info@supportsnap.org">info@supportsnap.org</a>
             </li>
-            <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="150">
+            <!-- <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="150">
               <span class="icon">
                 <img src="/images/phone_icon.png" alt="image" />
               </span>
@@ -34,7 +35,7 @@
               </span>
               <span class="lable">Our location</span>
               <a target="_blank" href="https://www.google.com/maps">Open Google Maps</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
@@ -127,9 +128,10 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <input
+                      v-mask="'+1(###)-###-####'"
+                      placeholder="+1 555-555-5555"
                       type="tel"
                       class="form-control"
-                      placeholder="Phone"
                       v-model="state.vu_phone"
                       v-bind:class="{
                         invaliddata: v$.vu_phone.$error == true
@@ -145,7 +147,7 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Address"
+                      placeholder="Address*"
                       v-model="state.vu_address"
                       v-bind:class="{
                         invaliddata: v$.vu_address.$error == true
@@ -161,7 +163,7 @@
                   <div class="form-group">
                     <textarea
                       class="form-control"
-                      placeholder="Comments"
+                      placeholder="Comments*"
                       v-model="state.vu_message"
                       v-bind:class="{
                         invaliddata: v$.vu_message.$error == true
@@ -209,7 +211,7 @@
       <!-- Contact Form Section End -->
 
       <!-- Google Map Start -->
-      <div class="map_block row_am" data-aos="fade-in" data-aos-duration="1500">
+      <!-- <div class="map_block row_am" data-aos="fade-in" data-aos-duration="1500">
         <div class="container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103190.9858395081!2d-115.2979677164074!3d36.07597430119342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sen!2sin!4v1691230337798!5m2!1sen!2sin"
@@ -219,7 +221,7 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </div>
+      </div> -->
       <!-- Google Map End -->
     </div>
     <Footer />
@@ -269,18 +271,18 @@ const v$ = useVuelidate(rules, state)
 const onSubmit = () => {
   try {
     v$.value.$validate()
-    console.log('Validation State:', v$.value)
-    console.log('Validation Errors:', v$.value.$error)
+    //console.log('Validation State:', v$.value)
+    //console.log('Validation Errors:', v$.value.$error)
     if (!v$.value.$error) {
       // Check if reCAPTCHA is verified
 
       if (!isRecaptchaVerified.value) {
-        console.log(isRecaptchaVerified.value, 'Recaptcha Verification')
+        //console.log(isRecaptchaVerified.value, 'Recaptcha Verification')
         recaptchaErrorMsg.value = 'Please complete the reCAPTCHA verification.'
         return // Stop form submission
       }
       // Clear the error message if verified
-      recaptchaErrorMsg.value = '';
+      recaptchaErrorMsg.value = ''
       // Proceed with the form submission if valid and verified
       callContact()
     }
@@ -351,5 +353,8 @@ function recaptchaError(reason) {
 .myerror {
   color: #fff;
   font-size: 13px;
+}
+.contact_form {
+  margin-bottom: 60px;
 }
 </style>

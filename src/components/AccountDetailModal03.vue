@@ -7,11 +7,11 @@
     </div>
   </div> -->
   <Transition name="modal">
-    <div v-if="propValue02" class="modal-mask">
+    <div v-if="propValue03" class="modal-mask">
       <div class="modal-container" ref="modal">
         <div class="modal-header">
           <slot name="header"
-            ><h3>Dear {{ propUser02 }}</h3></slot
+            ><h3>Dear {{ propUser03 }}</h3></slot
           >
         </div>
 
@@ -66,8 +66,8 @@ const store = useStore()
 // import { useStore } from 'vuex'
 
 const props = defineProps({
-  propValue02: Boolean,
-  propUser02: {
+  propValue03: Boolean,
+  propUser03: {
     type: String,
     required: true
   },
@@ -99,7 +99,7 @@ const zoomIn = () => {
 // }
 
 const cancelModal = () => {
-  emit('pparentCloseModal02')
+  emit('pparentCloseModal03')
   // callVarify()
 }
 
@@ -138,7 +138,7 @@ async function submitForm() {
 }
 
 watch(
-  () => props.propValue,
+  () => props.propValue03,
   (newVal) => {
     if (newVal) {
       zoomIn()

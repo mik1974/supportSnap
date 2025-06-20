@@ -26,10 +26,9 @@
                           }"
                         />
                         <div class="myerror" v-if="v$.vue_email.$error">
-                        {{ v$.vue_email.$errors[0].$message }}
+                          {{ v$.vue_email.$errors[0].$message }}
+                        </div>
                       </div>
-                      </div>
-                     
                     </div>
                     <div class="form-group">
                       <!-- <input
@@ -51,7 +50,7 @@
   </div>
 </template>
 
-<script  setup>
+<script setup>
 import useVuelidate from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 import { reactive, computed, ref } from 'vue'
@@ -72,14 +71,14 @@ const v$ = useVuelidate(rules, state, { $lazy: true })
 const emailSubmit = async () => {
   try {
     await v$.value.$validate()
-    console.log('I am in again', !v$.value.$error)
+    //console.log('I am in again', !v$.value.$error)
 
     if (!v$.value.$error) {
       resetPassword()
     }
   } catch (error) {
     alert('form failed validation')
-    console.log(error)
+   // console.log(error)
   }
 }
 
@@ -90,7 +89,7 @@ const resetPassword = async () => {
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .panel {
   max-width: 500px;
   margin: 100px auto;
@@ -142,5 +141,3 @@ const resetPassword = async () => {
   border-radius: 12px;
 }
 </style>
-
-

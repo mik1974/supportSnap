@@ -72,15 +72,40 @@
                           <div class="form-group">
                             <label for="dob">Update Image</label>
                             <div class="clear"></div>
-                            <img
-                              v-if="previewImage === ''"
+                            <!-- <img
+                              v-if="
+                                previewImage === '' ||
+                                null ||
+                                'https://virtualrealitycreators.com/supportsnap-backend/null'
+                              "
                               :src="'images/team_01.png'"
                               class="img-thumbnail rounded-circle"
                               alt="Service"
                               style="height: 65px; width: 65px"
-                            />
+                            /> -->
+
                             <img
+                              v-if="
+                                
+                                isPreviewImageValid
+                              "
+                              :src="'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp'"
+                              class="img-thumbnail rounded-circle"
+                              alt="Service"
+                              style="height: 65px; width: 65px"
+                            />
+                            <!-- <img
                               v-if="previewImage !== ''"
+                              :src="previewImage"
+                              class="img-thumbnail rounded-circle"
+                              alt="Service"
+                              style="height: 65px; width: 65px; margin-right: 15px"
+                            /> -->
+                            <img
+                              v-if="
+                                previewImage !==
+                                'https://supportsnap.s3.us-east-2.amazonaws.com/null'
+                              "
                               :src="previewImage"
                               class="img-thumbnail rounded-circle"
                               alt="Service"
@@ -194,6 +219,11 @@ const uploadImage = (e) => {
   }
 }
 
+const imageUrl = import.meta.env.VITE_APP_IMAGE_URL; // Store env variable in a script
+const isPreviewImageValid = computed(() => {
+  return !previewImage.value || previewImage.value === `${imageUrl}null`;
+});
+
 const submitForm = async () => {
   try {
     await v$.value.$validate()
@@ -202,12 +232,12 @@ const submitForm = async () => {
     }
   } catch (error) {
     alert('form failed validation')
-    console.log(error)
+    //console.log(error)
   }
 }
 
 const parentCloseModal = () => {
-  console.log('I am in Modal submit')
+  //console.log('I am in Modal submit')
   callApiforSendingData()
 }
 

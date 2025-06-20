@@ -10,12 +10,12 @@
               <div class="col-md-4">
                 <div class="logo_side">
                   <div class="logo">
-                    <!-- <router-link class="navbar-brand" :to="{ name: 'home' }"
+                    <router-link class="navbar-brand" :to="{ name: 'home' }"
                       ><img src="/images/logo-d01.png" alt="Logo"
-                    /></router-link> -->
-                    <a href="/">
+                    /></router-link>
+                    <!-- <a href="/">
                       <img src="/images/logo-d01.png" alt="Logo" />
-                    </a>
+                    </a> -->
                   </div>
                   <!-- <div class="news_letter">
                     <h3>Subscribe newsletter</h3>
@@ -31,21 +31,31 @@
                     </form>
                   </div>-->
                   <ul class="contact_info">
-                    <li><a href="mailto:">support@example.com</a></li>
-                    <li><a href="tel: ">+1-900-123 4567</a></li>
+                    <li><a href="mailto:info@supportsnap.org">info@supportsnap.org</a></li>
+                    <!-- <li><a href="tel: ">+1-900-123 4567</a></li> -->
                   </ul>
                   <ul class="social_media">
                     <li>
-                      <a href="#"><i class="icofont-facebook"></i></a>
+                      <a
+                        href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F"
+                        target="_blank"
+                        ><i class="icofont-facebook"></i
+                      ></a>
                     </li>
                     <li>
-                      <a href="#"><i class="icofont-twitter"></i></a>
+                      <a href="https://x.com/?lang=en&mx=2" target="_blank"
+                        ><i class="icofont-twitter"></i
+                      ></a>
                     </li>
                     <li>
-                      <a href="#"><i class="icofont-instagram"></i></a>
+                      <a href="https://www.instagram.com/" target="_blank"
+                        ><i class="icofont-instagram"></i
+                      ></a>
                     </li>
                     <li>
-                      <a href="#"><i class="icofont-pinterest"></i></a>
+                      <a href="https://www.pinterest.com/" target="_blank"
+                        ><i class="icofont-pinterest"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
@@ -54,11 +64,23 @@
                 <h3>Main Links</h3>
                 <div class="mainLinks">
                   <ul>
-                    <li><a href="#" @click="callAboutUs">About us</a></li>
+                    <!-- <li><a href="#" @click="callAboutUs">About us</a></li>
                     <li><a href="#" @click="callContact">Contact Us</a></li>
                     <li><a href="#" @click="callTerms">Terms & Conditions</a></li>
                     <li><a href="#" @click="callPpolicy">Privacy Policy</a></li>
-                    <li><a href="#" @click="callDeletion">Deletion Policy</a></li>
+                    <li><a href="#" @click="callDeletion">Deletion Policy</a></li> -->
+                    <!-- <li><a href="#" @click="callAboutUs">About us</a></li> -->
+                    <li><router-link to="/">Home</router-link></li>
+                    <!-- <li><router-link to="/about-us">About us</router-link></li>
+                    <li><router-link to="/contact-us">Contact Us</router-link></li> -->
+                    <li><router-link to="/about-us">About us</router-link></li>
+                    <li>
+                      <router-link to="/terms-and-conditions">Terms & Conditions</router-link>
+                    </li>
+                    <li><router-link to="/privacy-policy">Privacy Policy</router-link></li>
+                    <li><router-link to="/deletion-policy">Deletion Policy</router-link></li>
+                    <!-- <li><router-link to="/privacy-policy">Privacy Policy</router-link></li>
+                    <li><router-link to="/deletion-policy">Deletion Policy</router-link></li>-->
                   </ul>
                 </div>
               </div>
@@ -67,12 +89,18 @@
                   <h3>Download app</h3>
                   <ul class="app_btn">
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.anideos.supportsnap"
+                        target="_blank"
+                      >
                         <img class="blue_img" src="/images/googleplay.png" alt="image" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://apps.apple.com/us/app/support-snap/id6477719410"
+                        target="_blank"
+                      >
                         <img class="blue_img" src="/images/appstorebtn.png" alt="image" />
                       </a>
                     </li>
@@ -171,7 +199,7 @@ const cuYear = ref('')
 //   '/supportSnap-web/js/mainn.js'
 
 //   // Add more script URLs as needed
-//]
+// ]
 
 const scriptUrls = [
   '/js/jquery.js',
@@ -282,7 +310,7 @@ const initializeOwlCarousel03 = () => {
     dots: false,
     autoplay: true,
     slideTransition: 'linear',
-    utoplayTimeout: 4000,
+    autoplayTimeout: 4000,
     autoplaySpeed: 4000,
     // smartSpeed: 2500,
     center: true,
@@ -314,7 +342,7 @@ const initializeOwlCarousel04 = () => {
     dots: false,
     autoplay: true,
     slideTransition: 'linear',
-    utoplayTimeout: 4000,
+    autoplayTimeout: 4000,
     autoplaySpeed: 4000,
     // smartSpeed: 2500,
     center: true,
@@ -338,31 +366,31 @@ onMounted(() => {
   cuYear.value = new Date().getFullYear()
 })
 
-function callHome() {
-  //window.scroll(0, 0);
-  this.$router.push('/')
-}
-function callContact() {
-  window.scroll(0, 0)
-  router.push('/contact-us')
-}
-function callPpolicy() {
-  window.scroll(0, 0)
-  router.push('/privacy-policy')
-}
-function callTerms() {
-  window.scroll(0, 0)
-  router.push('/terms-and-conditions')
-}
-function callAboutUs() {
-  window.scroll(0, 0)
-  router.push('/about-us')
-  //router.push('/')
-}
-function callDeletion() {
-  window.scroll(0, 0)
-  router.push('/deletion-policy')
-}
+// function callHome() {
+//   //window.scroll(0, 0);
+//   this.$router.push('/')
+// }
+// function callContact() {
+//   window.scroll(0, 0)
+//   router.push('/contact-us')
+// }
+// function callPpolicy() {
+//   window.scroll(0, 0)
+//   router.push('/privacy-policy')
+// }
+// function callTerms() {
+//   window.scroll(0, 0)
+//   router.push('/terms-and-conditions')
+// }
+// function callAboutUs() {
+//   window.scroll(0, 0)
+//   router.push('/about-us')
+//   //router.push('/')
+// }
+// function callDeletion() {
+//   window.scroll(0, 0)
+//   router.push('/deletion-policy')
+// }
 </script>
 
 <style scoped>

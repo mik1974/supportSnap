@@ -13,6 +13,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['primevue/tooltip']
   },
-  base: process.env.NODE_ENV === 'production' ? '/supportSnap-web/' : '/'
-  //base: '/supportSnap-web/'
+  //base: process.env.NODE_ENV === 'production' ? '/supportSnap-web/' : '/'
+  base: '/'
 })
